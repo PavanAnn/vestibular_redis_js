@@ -1,0 +1,27 @@
+{
+  "name": "vestibular-redis",
+  "version": "1.0.0",
+  "description": "tarefa mateus",
+  "type": "module",
+  "main": "client.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PavanAnn/vestibular_redis_js.git"
+  },
+  "author": "pavan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PavanAnn/vestibular_redis_js/issues"
+  },
+  "homepage": "https://github.com/PavanAnn/vestibular_redis_js#readme",
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "@types/faker": "^6.6.9"
+  }
+}
