@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import { faker } from '@faker-js/faker';
-
+import { mongoConnect } from './mongo.js';
 function generateID() {
     let id = "";
     for (let i = 0; i < 11; i++) {
@@ -26,7 +26,6 @@ function generateID() {
     'Engenharia de Computação',
     'Engenharia de Controle e Automação',
     'Engenharia de Produção'
-
   ]
 
   const year = 2023;
@@ -43,4 +42,6 @@ function generateID() {
     students.push({ id, name, ano, disciplina });
   }
   
-  fs.writeFileSync('students.json', JSON.stringify(students, null, 2));
+  fs.writeFileSync('students.json', JSON.stringify(students, null, 2))
+  mongoConnect()
+  
