@@ -42,7 +42,5 @@ function generateID() {
     let disciplina = disciplinas[Math.floor(Math.random() * disciplinas.length)];
     students.push({ id, name, ano, disciplina });
   }
-
-fs.writeFileSync('students.json', JSON.stringify(students, null, 2));
-
-console.log(`Successfully generated ${numStudents} students and saved them to students.json`);
+  
+  fs.writeFileSync('students.json', JSON.stringify(students, null, 2));
