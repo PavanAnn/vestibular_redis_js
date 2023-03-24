@@ -23,6 +23,7 @@
   "dependencies": {
     "@faker-js/faker": "^7.6.0",
     "@types/faker": "^6.6.9",
-    "mongodb": "^5.1.0"
+    "mongodb": "^5.1.0",
+    "redis": "^4.6.5"
   }
 }
