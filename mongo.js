@@ -35,11 +35,23 @@ const redisClient = createClient({
 export const getAprovados = () => {
     const aprovados = col.find()
     let key;
-    let value;
     for(let row of aprovados) {
         key = row._id;
         redisClient.set(key, json.stringify(row));
-        value = redisClient.get(key);
+    }
+
+    const colUpdate = col.watch(full_document="updateLookup")
+
+    for(let update of colUpdate) {
+        let colType = update["operationType"]
+
+        if(colType.includes(["insert", "update"])) {
+            let fullDocument = update["fullDocument"] 
+            let colJson = json.dumps(fullDocument)
+
+            let key = fullDocument["_id"]
+            redisClient.set(key, colJson)
+        }
     }
 
 }
